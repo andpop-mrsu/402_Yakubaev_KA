@@ -59,4 +59,4 @@
 
 ## Ссылки
 
-Packagist: <https://packagist.org/packages/kyya/cold-hot>
+Packagist: <https://packagist.org/packages/k-y-y-a/cold-hot>
