@@ -8,6 +8,6 @@
         require_once($autoPackagist);
     }
 
-    use function ssiffonn\cold_hot\Controller\startGame;
+    use function K-y-y-a\cold_hot\Controller\startGame;
     startGame();
 ?>
