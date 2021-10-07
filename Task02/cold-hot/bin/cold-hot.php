@@ -8,6 +8,6 @@
         require_once($autoPackagist);
     }
 
-    use function K-y-y-a\cold_hot\Controller\startGame;
+    use function kyya\cold_hot\Controller\startGame;
     startGame();
 ?>
