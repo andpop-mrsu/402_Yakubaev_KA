@@ -1,0 +1,20 @@
+{
+    "name": "k-y-y-a/task01",
+    "authors": [
+        {
+            "name": "Yakubaev Kyarim",
+            "email": "kyyawriter@gmail.com"
+        }
+    ],
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": {"App\\": "src/"},
+        "files": [
+            "src/Test.php"
+        ]
+    },
+    "bin": [
+        "bin/run-test"
+    ]
+}
