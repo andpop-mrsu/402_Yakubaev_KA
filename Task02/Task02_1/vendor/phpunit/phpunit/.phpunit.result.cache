@@ -1,0 +1,1 @@
+{"version":1,"defects":[],"times":{"Tests\\VectorTest\\VectorTest::testAdd":0.002,"Tests\\VectorTest\\VectorTest::testSub":0,"Tests\\VectorTest\\VectorTest::testProduct":0,"Tests\\VectorTest\\VectorTest::testScalarProduct":0,"Tests\\VectorTest\\VectorTest::testVectorProduct":0}}
