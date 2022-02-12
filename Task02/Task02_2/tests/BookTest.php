@@ -1,4 +1,5 @@
 <?php
+
 namespace Tests\BookTest;
 
 use App\Book;
