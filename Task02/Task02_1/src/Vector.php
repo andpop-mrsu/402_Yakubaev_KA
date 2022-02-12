@@ -44,24 +44,11 @@ class Vector
 
     public function scalarProduct(Vector $vector) : int
     {
-        $aLength = sqrt(
-            pow($this->x, 2) + 
-            pow($this->y, 2) + 
-            pow($this->z, 2)
-        );
-    
-        $bLength = sqrt(
-            pow($vector->x, 2) + 
-            pow($vector->y, 2) + 
-            pow($vector->z, 2)
-        );
-
-        $cosAB = (
-            $this->x * $vector->x + 
-            $this->y * $vector->y + 
-            $this->z * $vector->z
-        ) / ($aLength * $bLength);
-
+        $aLength = sqrt(pow($this->x, 2) + pow($this->y, 2) + pow($this->z, 2)); 
+        $bLength = sqrt(pow($vector->x, 2) + pow($vector->y, 2) + pow($vector->z, 2));
+        $c = $this->x * $vector->x + $this->y * $vector->y + $this->z * $vector->z;
+        $cosAB = $c / ($aLength * $bLength);
+        
         return $aLength * $bLength * $cosAB;
     }
 
