@@ -31,5 +31,6 @@ class BooksList
             return "Файл не найден";
         }
         $this->books = unserialize(file_get_contents($fileName));   
+        return "Файл успешно загружен";
     }
 }
