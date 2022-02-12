@@ -12,6 +12,7 @@ class BookTest extends TestCase
     {
         $book = new Book();
         $book->setTitle("Design Patterns");
+
         $this->assertEquals("Design Patterns", $book->getTitle());
     }
 
@@ -24,6 +25,7 @@ class BookTest extends TestCase
             "Sierra K.",
             "Bates B."
         ));
+
         $this->assertEquals(array(
             "Freeman E.",
             "Freeman E.",
@@ -36,6 +38,7 @@ class BookTest extends TestCase
     {
         $book = new Book();
         $book->setPublishingHous("St. Petersburg: Peter");
+
         $this->assertEquals(
             "St. Petersburg: Peter", 
             $book->getPublishingHous()
@@ -46,6 +49,7 @@ class BookTest extends TestCase
     {
         $book = new Book();
         $book->setPublishingYear(2011);
+
         $this->assertEquals(2011, $book->getPublishingYear());
     }
 }
