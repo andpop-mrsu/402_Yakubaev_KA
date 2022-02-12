@@ -1,4 +1,5 @@
 <?php
+
 namespace Tests\VectorTest;
 
 use App\Vector;
