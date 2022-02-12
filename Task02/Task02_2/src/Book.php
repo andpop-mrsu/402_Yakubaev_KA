@@ -24,6 +24,7 @@ class Book
     public function setTitle(string $title) : Book
     {
         $this->title = $title;
+
         return $this;
     }
 
@@ -35,6 +36,7 @@ class Book
     public function setAuthors(array $authors) : Book
     {
         $this->authors = $authors;
+
         return $this;
     }
 
@@ -46,6 +48,7 @@ class Book
     public function setPublishingHous(string $publishingHous) : Book
     {
         $this->publishingHous = $publishingHous;
+
         return $this;
     }
 
@@ -57,6 +60,7 @@ class Book
     public function setPublishingYear(int $publishingYear) : Book
     {
         $this->publishingYear = $publishingYear;
+
         return $this;
     }
     public function getPublishingYear() : int
@@ -68,14 +72,17 @@ class Book
     {
         $outputString = "Id: " . $this->getId()."\n" . 
             "Название: " . $this->getTitle() . "\n";
+
         for($i = 0; $i < count($this->authors); $i++) {
             $outputString .= "Автор" . ($i + 1) . ": ";
             $outputString .= $this->getAuthors()[$i] . "\n";
         }    
+
         $outputString .= "Издательский дом: ";
         $outputString .= $this->getPublishingHous() . "\n";
         $outputString .= "Год издания: ";
         $outputString .= $this->getPublishingYear() . "\n";
+
         return $outputString;
     }
 }
