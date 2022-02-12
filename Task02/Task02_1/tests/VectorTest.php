@@ -21,20 +21,14 @@ class VectorTest extends TestCase
         $v1 = new Vector(4, 5, 6);
         $v2 = new Vector(7, 8, 9);
 
-        $this->assertEquals(
-            new Vector(-3, -3, -3), 
-            $v1->sub($v2)
-        );
+        $this->assertEquals(new Vector(-3, -3, -3), $v1->sub($v2));
     }
 
     public function testProduct()
     {
         $v1 = new Vector(10, 11, 12);
 
-        $this->assertEquals(
-            new Vector(20, 22, 24), 
-            $v1->product(2)
-        );
+        $this->assertEquals(new Vector(20, 22, 24), $v1->product(2));
     }
 
     public function testScalarProduct()
@@ -50,9 +44,6 @@ class VectorTest extends TestCase
         $v1 = new Vector(13, 14, 15);
         $v2 = new Vector(16, 17, 18);
 
-        $this->assertEquals(
-            new Vector(-3, 6, -3), 
-            $v1->vectorProduct($v2)
-        );
+        $this->assertEquals(new Vector(-3, 6, -3), $v1->vectorProduct($v2));
     }
 }
