@@ -20,6 +20,7 @@ class Vector
         $x = $this->x + $vector->x;
         $y = $this->y + $vector->y;
         $z = $this->z + $vector->z; 
+
         return new Vector($x, $y, $z);
     }
 
@@ -28,6 +29,7 @@ class Vector
         $x = $this->x - $vector->x;
         $y = $this->y - $vector->y;
         $z = $this->z - $vector->z; 
+
         return new Vector($x, $y, $z);
     }
 
@@ -35,7 +37,8 @@ class Vector
     {
         $x = $this->x * $number;
         $y = $this->y * $number;
-        $z = $this->z * $number; 
+        $z = $this->z * $number;
+ 
         return new Vector($x, $y, $z);
     }
 
@@ -58,6 +61,7 @@ class Vector
             $this->y * $vector->y + 
             $this->z * $vector->z
         ) / ($aLength * $bLength);
+
         return $aLength * $bLength * $cosAB;
     }
 
@@ -66,6 +70,7 @@ class Vector
         $x = $this->y * $vector->z - $this->z * $vector->y;
         $y = $this->z * $vector->x - $this->x * $vector->z;
         $z = $this->x * $vector->y - $this->y * $vector->x;  
+
         return new Vector($x, $y, $z);
     }
 
