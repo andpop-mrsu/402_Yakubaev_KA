@@ -4,9 +4,9 @@ namespace App;
 
 class Vector
 {
-    private $x;
-    private $y;
-    private $z;
+    private int $x;
+    private int $y;
+    private int $z;
 
     public function __construct(int $x, int $y, int $z) 
     {
