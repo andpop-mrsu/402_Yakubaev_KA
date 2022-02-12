@@ -51,7 +51,7 @@ class BooksListTest extends TestCase
     public function testLoad()
     {
         $booksList = new BooksList();
-        $booksList->load("storage");
+        $this->assertEquals("Файл успешно загружен", $booksList->load("storage"));
         $this->assertEquals(1, $booksList->count());
         $this->assertInstanceOf(Book::class, $booksList->get(1));
     }
