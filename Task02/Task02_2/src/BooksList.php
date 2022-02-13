@@ -1,9 +1,10 @@
 <?php
+
 namespace App;
 
 class BooksList
 {
-    private array $books = array();
+    private array $books;
 
     public function add(Book $book)
     {
@@ -15,21 +16,24 @@ class BooksList
         return count($this->books);
     }
 
-    public function get($n) : Book
+    public function get(int $n) : Book
     {
         return $this->books[$n - 1];
     }
 
-    public function store($fileName)
+    public function store(string $fileName)
     {
         file_put_contents($fileName, serialize($this->books));
     }
 
-    public function load($fileName) : string
+    public function load(string $fileName) : string
     {
         if (!file_exists($fileName)){
             return "Файл не найден";
         }
-        $this->books = unserialize(file_get_contents($fileName));   
+
+        $this->books = unserialize(file_get_contents($fileName));  
+ 
+        return "Файл успешно загружен";
     }
 }

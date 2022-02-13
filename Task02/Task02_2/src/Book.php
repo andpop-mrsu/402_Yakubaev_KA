@@ -1,14 +1,15 @@
 <?php
+
 namespace App;
 
 class Book
 {
-    private static $lastId = 1;
-    private $id;
-    private $title;
-    private $authors = array();
-    private $publishingHous;
-    private $publishingYear;
+    private static int $lastId = 1;
+    private int $id;
+    private string $title;
+    private array $authors;
+    private string $publishingHous;
+    private int $publishingYear;
 
     public function __construct()
     {
@@ -20,9 +21,10 @@ class Book
         return $this->id;
     }
 
-    public function setTitle($title) : Book
+    public function setTitle(string $title) : Book
     {
         $this->title = $title;
+
         return $this;
     }
 
@@ -31,9 +33,10 @@ class Book
         return $this->title;
     }
 
-    public function setAuthors($authors) : Book
+    public function setAuthors(array $authors) : Book
     {
         $this->authors = $authors;
+
         return $this;
     }
 
@@ -42,9 +45,10 @@ class Book
         return $this->authors;
     }
 
-    public function setPublishingHous($publishingHous) : Book
+    public function setPublishingHous(string $publishingHous) : Book
     {
         $this->publishingHous = $publishingHous;
+
         return $this;
     }
 
@@ -53,9 +57,10 @@ class Book
         return $this->publishingHous;
     }    
 
-    public function setPublishingYear($publishingYear) : Book
+    public function setPublishingYear(int $publishingYear) : Book
     {
         $this->publishingYear = $publishingYear;
+
         return $this;
     }
     public function getPublishingYear() : int
@@ -67,14 +72,17 @@ class Book
     {
         $outputString = "Id: " . $this->getId()."\n" . 
             "Название: " . $this->getTitle() . "\n";
+
         for($i = 0; $i < count($this->authors); $i++) {
             $outputString .= "Автор" . ($i + 1) . ": ";
             $outputString .= $this->getAuthors()[$i] . "\n";
         }    
+
         $outputString .= "Издательский дом: ";
         $outputString .= $this->getPublishingHous() . "\n";
         $outputString .= "Год издания: ";
         $outputString .= $this->getPublishingYear() . "\n";
+
         return $outputString;
     }
 }

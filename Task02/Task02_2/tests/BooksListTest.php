@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Tests;
 
 use App\Book;
@@ -13,6 +14,7 @@ class BooksListTest extends TestCase
         $book = new Book();
         $booksList = new BooksList();
         $booksList->add($book);
+
         $this->assertEquals(1, $booksList->count());
     }
 
@@ -20,14 +22,13 @@ class BooksListTest extends TestCase
     {
         $book = new Book();
         $booksList = new BooksList();
-        $book->setTitle("Design Patterns")
-            ->setAuthors(array(
-                "Freeman E.",
-                "Freeman E.",
-                "Sierra K.",
-                "Bates B."
-            ))->setPublishingHous("St. Petersburg: Peter")
-            ->setPublishingYear(2011);
+
+        $book->
+        setTitle("Design Patterns")->
+        setAuthors(array("Freeman E.","Freeman E.","Sierra K.","Bates B."))->
+        setPublishingHous("St. Petersburg: Peter")->
+        setPublishingYear(2011);
+
         $booksList->add($book);
         $this->assertInstanceOf(Book::class, $booksList->get(1));
     }
@@ -36,14 +37,12 @@ class BooksListTest extends TestCase
     {
         $book = new Book();
         $booksList = new BooksList();
-        $book->setTitle("Design Patterns")
-            ->setAuthors(array(
-                "Freeman E.",
-                "Freeman E.",
-                "Sierra K.",
-                "Bates B."
-            ))->setPublishingHous("St. Petersburg: Peter")
-            ->setPublishingYear(2011);
+
+        setTitle("Design Patterns")->
+        setAuthors(array("Freeman E.","Freeman E.","Sierra K.","Bates B."))->
+        setPublishingHous("St. Petersburg: Peter")->
+        setPublishingYear(2011);
+
         $booksList->add($book);
         $this->assertEquals(null, $booksList->store("storage"));
     }
@@ -51,7 +50,8 @@ class BooksListTest extends TestCase
     public function testLoad()
     {
         $booksList = new BooksList();
-        $booksList->load("storage");
+
+        $this->assertEquals("Файл успешно загружен", $booksList->load("storage"));
         $this->assertEquals(1, $booksList->count());
         $this->assertInstanceOf(Book::class, $booksList->get(1));
     }

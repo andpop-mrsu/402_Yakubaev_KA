@@ -1,11 +1,12 @@
 <?php
+
 namespace App;
 
 class Vector
 {
-    private $x;
-    private $y;
-    private $z;
+    private int $x;
+    private int $y;
+    private int $z;
 
     public function __construct(int $x, int $y, int $z) 
     {
@@ -19,6 +20,7 @@ class Vector
         $x = $this->x + $vector->x;
         $y = $this->y + $vector->y;
         $z = $this->z + $vector->z; 
+
         return new Vector($x, $y, $z);
     }
 
@@ -27,6 +29,7 @@ class Vector
         $x = $this->x - $vector->x;
         $y = $this->y - $vector->y;
         $z = $this->z - $vector->z; 
+
         return new Vector($x, $y, $z);
     }
 
@@ -34,29 +37,18 @@ class Vector
     {
         $x = $this->x * $number;
         $y = $this->y * $number;
-        $z = $this->z * $number; 
+        $z = $this->z * $number;
+ 
         return new Vector($x, $y, $z);
     }
 
     public function scalarProduct(Vector $vector) : int
     {
-        $aLength = sqrt(
-            pow($this->x, 2) + 
-            pow($this->y, 2) + 
-            pow($this->z, 2)
-        );
-    
-        $bLength = sqrt(
-            pow($vector->x, 2) + 
-            pow($vector->y, 2) + 
-            pow($vector->z, 2)
-        );
-
-        $cosAB = (
-            $this->x * $vector->x + 
-            $this->y * $vector->y + 
-            $this->z * $vector->z
-        ) / ($aLength * $bLength);
+        $aLength = sqrt(pow($this->x, 2) + pow($this->y, 2) + pow($this->z, 2)); 
+        $bLength = sqrt(pow($vector->x, 2) + pow($vector->y, 2) + pow($vector->z, 2));
+        $c = $this->x * $vector->x + $this->y * $vector->y + $this->z * $vector->z;
+        $cosAB = $c / ($aLength * $bLength);
+        
         return $aLength * $bLength * $cosAB;
     }
 
@@ -65,6 +57,7 @@ class Vector
         $x = $this->y * $vector->z - $this->z * $vector->y;
         $y = $this->z * $vector->x - $this->x * $vector->z;
         $z = $this->x * $vector->y - $this->y * $vector->x;  
+
         return new Vector($x, $y, $z);
     }
 
