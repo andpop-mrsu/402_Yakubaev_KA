@@ -4,7 +4,7 @@ namespace App;
 
 class BooksList
 {
-    private array $books;
+    private array $books = array();
 
     public function add(Book $book)
     {
