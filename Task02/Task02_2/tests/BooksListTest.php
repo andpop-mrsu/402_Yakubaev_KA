@@ -9,8 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 class BooksListTest extends TestCase
 {
-    public function testAddAndCount()
-    {
+    public function testAddAndCount() {
         $book = new Book();
         $booksList = new BooksList();
         $booksList->add($book);
@@ -38,6 +37,7 @@ class BooksListTest extends TestCase
         $book = new Book();
         $booksList = new BooksList();
 
+        $book->
         setTitle("Design Patterns")->
         setAuthors(array("Freeman E.","Freeman E.","Sierra K.","Bates B."))->
         setPublishingHous("St. Petersburg: Peter")->

@@ -40,7 +40,7 @@ class BookTest extends TestCase
         $book->setPublishingHous("St. Petersburg: Peter");
 
         $this->assertEquals(
-            "St. Petersburg: Peter", 
+            "St. Petersburg: Peter",
             $book->getPublishingHous()
         );
     }

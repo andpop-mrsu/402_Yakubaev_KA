@@ -7,7 +7,7 @@ class Book
     private static int $lastId = 1;
     private int $id;
     private string $title;
-    private array $authors;
+    private array $authors = array();
     private string $publishingHous;
     private int $publishingYear;
 
