@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => 'e3a531c6040c64f9d5e1dd0ac579a599949ae471',
+    'reference' => '79b6605207d839d74ffe9b3e23e03f5d7822f950',
     'name' => 'k-y-y-a/task02_1',
   ),
   'versions' => 
@@ -27,7 +27,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => 'e3a531c6040c64f9d5e1dd0ac579a599949ae471',
+      'reference' => '79b6605207d839d74ffe9b3e23e03f5d7822f950',
     ),
     'myclabs/deep-copy' => 
     array (
