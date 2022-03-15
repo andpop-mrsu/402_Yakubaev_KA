@@ -7,7 +7,7 @@ use Iterator as Iterator;
 
 class BooksList implements Iterator
 {
-    private array $books;
+    private array $books = array();
 
     public function add(Book $book): void
     {
@@ -40,7 +40,7 @@ class BooksList implements Iterator
         return "Файл успешно загружен";
     }
 
-    public function current(): mixed
+    public function current(): Book
     {
         $result = current($this->books);
 
