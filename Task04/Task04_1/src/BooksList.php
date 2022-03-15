@@ -40,7 +40,7 @@ class BooksList implements Iterator
         return "Файл успешно загружен";
     }
 
-    public function current(): mixed
+    public function current(): Book
     {
         $result = current($this->books);
 
