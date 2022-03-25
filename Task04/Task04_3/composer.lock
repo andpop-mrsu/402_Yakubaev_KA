@@ -2113,5 +2113,9 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
+<<<<<<< HEAD
     "plugin-api-version": "2.2.0"
+=======
+    "plugin-api-version": "2.0.0"
+>>>>>>> a65b78d675ce63b78ed0ee19e429ca0ac48c4067
 }
